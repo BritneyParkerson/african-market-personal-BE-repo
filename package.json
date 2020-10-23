@@ -1,0 +1,54 @@
+{
+  "name": "african-market-personal-BE-repo",
+  "version": "1.0.0",
+  "description": "Mission Statement: To empower women to take control of their financial situations and rise from the ashes of poverty. (My side project for African Market Place Backend for build week)",
+  "main": "index.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "test": "cross-env DB_ENV=testing jest --watch",
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BritneyParkerson/african-market-personal-BE-repo.git"
+  },
+  "keywords": [
+    "african",
+    "marketplace",
+    "women",
+    "woman",
+    "business"
+  ],
+  "author": "Britney Parkerson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BritneyParkerson/african-market-personal-BE-repo/issues"
+  },
+  "homepage": "https://github.com/BritneyParkerson/african-market-personal-BE-repo#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^2.0.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.6",
+    "knex-cleaner": "^1.3.1",
+    "pg": "^8.4.1",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0",
+    "nodemon": "^2.0.6",
+    "supertest": "^5.0.0"
+  }
+}
