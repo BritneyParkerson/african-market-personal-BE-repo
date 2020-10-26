@@ -4,9 +4,9 @@ const request = require('supertest');
 
 describe("categories", () => { 
     describe("GET request for products", () =>{
-        it("should return 500 status code when not logged in", async () => {
+        it("should return 400 status code when not logged in", async () => {
             const res = await request(server).get("/api/categories");
-            expect(res.status).toBe(500);
+            expect(res.status).toBe(400);
         })
         it("should return json", async() => {
             const res = await request(server).get("/api/categories");
