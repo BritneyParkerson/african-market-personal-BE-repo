@@ -15,7 +15,7 @@ server.use(cors());
 server.use(logger);
 
 server.use('/api/auth', authRouter);
-server.use('/api/products', verify, productsRouter);
+server.use('/api/products', verify,productsRouter);
 server.use('/api/categories', verify, catRouter);
 
 server.get('/', (req, res) => {
