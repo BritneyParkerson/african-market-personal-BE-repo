@@ -19,7 +19,7 @@ server.use('/api/products', verify,productsRouter);
 server.use('/api/categories', verify, catRouter);
 
 server.get('/', (req, res) => {
-	res.send('Your server awaits!');
+	res.send(MOTD);
 });
 
 function logger(req, res, next) {
