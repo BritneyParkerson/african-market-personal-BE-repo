@@ -15,11 +15,23 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   const { id } = req.params;
-
   Products.findById(id)
-    .then((products) => {
-      if (products) {
-        res.json(products);
+    .then((product) => {
+      if (product) {
+        res.status(200).json({
+          id: product.id,
+				name: product.name,
+				image_url: product.image_url,
+				price: product.price,
+				description: product.description,
+				region: product.region,
+				city: product.city,
+				address: product.address,
+				zip_code: product.zip_code,
+				created_at: product.created_at,
+				user_id: product.user_id,
+				category_id: product.category_id,
+        })
       } else {
         res
           .status(404)

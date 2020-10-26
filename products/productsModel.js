@@ -21,18 +21,22 @@ async function addProduct(product) {
   
   function findById(id) {
 	return db('products')
-		.join('users', 'products.user_id', '=', 'user_id')
-		.where('products.user_id', id)
-		.select(
-			'products.id as product_id',
-			'product_name',
-			'product_image_url',
-			'product_price',
-			'product_description',
-			'product_country',
-			'product_city',
-			'product_address',
-			'product_zip_code'
+	.join('users', 'products.user_id', '=', 'users.id')
+	.join('categories', 'products.category_id', '=', 'categories.id')
+	.where('products.user_id', id)
+	.select(
+		'products.id as id',
+		'name',
+		'image_url',
+		'price',
+		'description',
+		'country',
+		'city',
+		'address',
+		'zip_code',
+		'created_at',
+		'user_id',
+		'category_id'
 		);
 }
 
